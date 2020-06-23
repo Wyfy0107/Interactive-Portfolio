@@ -21,7 +21,7 @@ function CustomChatbot(props) {
 		{
 			id: 'Greet',
 			message: 'Hello, My name is Duy',
-			trigger: 'portfolio',
+			trigger: 'Done',
 		},
 		{
 			id: 'Done',
@@ -72,9 +72,16 @@ function CustomChatbot(props) {
 				display: props.infoDisplay ? 'flex' : null,
 				flexFlow: props.infoDisplay ? 'row' : null,
 				marginTop: '100px',
+				transform: props.transition ? 'translateX(10000px)' : null,
+				transition: '1s',
 			}}>
 			<ChatBot steps={steps} {...config} style={style} />
-			{props.infoDisplay ? <Info infoStatus={props.infoDisplay} /> : null}
+			{props.infoDisplay ? (
+				<Info
+					infoStatus={props.infoDisplay}
+					transition={props.transitionHandler}
+				/>
+			) : null}
 		</div>
 	);
 }

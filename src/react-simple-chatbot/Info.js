@@ -34,6 +34,7 @@ const ContinueButton = styled.div`
 	&:hover {
 		background: #900c3f;
 		transform: scale(1.2);
+		cursor: pointer;
 	}
 `;
 
@@ -51,12 +52,13 @@ function Info(props) {
 				<p
 					style={{
 						marginTop: '50px',
+						padding: '15px',
 					}}>
 					As you can see, React is the first framework that I started with and I
 					fell in love with it ever since. To me, react is cohesive and it
 					offers interactivity with ease.
 				</p>
-				<ContinueButton>What's more</ContinueButton>
+				<ContinueButton onClick={props.transition}>What's more</ContinueButton>
 			</InfoWrapper>
 		</div>
 	);
