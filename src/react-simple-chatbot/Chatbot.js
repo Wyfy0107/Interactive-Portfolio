@@ -21,7 +21,7 @@ function CustomChatbot(props) {
 		{
 			id: 'Greet',
 			message: 'Hello, My name is Duy',
-			trigger: 'Done',
+			trigger: 'portfolio',
 		},
 		{
 			id: 'Done',
@@ -52,13 +52,34 @@ function CustomChatbot(props) {
 		},
 		{
 			id: 'my answer',
-			message: 'Welcome then, I will show you what I can do',
-			trigger: 'portfolio',
+			message:
+				'Well, I am a student who is studying Environmental Engineering degree at Xamk University of Applied Sciences and I will be graduating soon',
+			trigger: 'introduction',
 		},
 		{
 			id: 'my sub answer',
 			message:
-				'Sorry to hear that, however while you are here, please take a look at my portfolio',
+				'Sorry to hear that, however while you are here, please let me introduce myself',
+			trigger: 'my answer',
+		},
+		{
+			id: 'introduction',
+			message:
+				'Then I wanted to learn something new and started with web development, and now, I fell in love with it.',
+			trigger: 'intro',
+		},
+		{
+			id: 'intro',
+			message: 'Let me show you more about what I have learned',
+			trigger: 'ok',
+		},
+		{
+			id: 'ok',
+			options: [{ value: 'ok', label: 'Ok', trigger: 'transition' }],
+		},
+		{
+			id: 'transition',
+			message: 'take a look on the right side',
 			trigger: 'portfolio',
 		},
 		{
