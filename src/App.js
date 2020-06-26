@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './react-simple-chatbot/Navbar';
 import CustomChatbot from './react-simple-chatbot/Chatbot';
 import About from './react-simple-chatbot/About';
 import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
+import AboutOpinion from './react-simple-chatbot/AboutOpinion';
 
 const AboutWrapper = styled.div`
 	margin: auto;
@@ -28,28 +30,36 @@ class App extends React.Component {
 
 	descriptionHandler = (string) => {
 		this.setState({ description: true, hoveringIcon: string });
-		console.log(this.state.hoveringIcon);
 	};
 
 	descriptionToggler = () => this.setState({ hoveringIcon: '' });
+
+	floatingToggler = () => this.setState({ floatingState: true });
 
 	render() {
 		return (
 			<div>
 				<Navbar />
-				<CustomChatbot
-					infoDisplay={this.state.infoDisplay}
-					infoDisplayHandler={this.infoDisplayHandler}
-					transitionHandler={this.aboutPageTransitionHandler}
-					transition={this.state.aboutPageTransition}
-				/>
-				<AboutWrapper transition={this.state.aboutPageTransition}>
-					<About
-						descriptionHandler={this.descriptionHandler}
-						hoverIcon={this.state.hoveringIcon}
-						mouseLeave={this.descriptionToggler}
-					/>
-				</AboutWrapper>
+				<Switch>
+					<Route exact path='/'>
+						<CustomChatbot
+							infoDisplay={this.state.infoDisplay}
+							infoDisplayHandler={this.infoDisplayHandler}
+							transitionHandler={this.aboutPageTransitionHandler}
+							transition={this.state.aboutPageTransition}
+						/>
+						<AboutWrapper transition={this.state.aboutPageTransition}>
+							<About
+								descriptionHandler={this.descriptionHandler}
+								hoverIcon={this.state.hoveringIcon}
+								mouseLeave={this.descriptionToggler}
+							/>
+						</AboutWrapper>
+					</Route>
+					<Route path='/About'>
+						<AboutOpinion />
+					</Route>
+				</Switch>
 			</div>
 		);
 	}

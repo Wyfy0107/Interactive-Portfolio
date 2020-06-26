@@ -1,11 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { faCalculator } from '@fortawesome/free-solid-svg-icons';
-import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
-import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons';
+import {
+	faUserCircle,
+	faCalculator,
+	faCloudSunRain,
+	faPuzzlePiece,
+	faInfo,
+} from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import DetailInfo from './DetailInfo';
+import { Link, Switch, Route } from 'react-router-dom';
+import AboutOpinion from './AboutOpinion';
 
 const gridStyle = {
 	fontSize: '5rem',
@@ -72,6 +77,17 @@ function About({ descriptionHandler, mouseLeave, hoverIcon }) {
 					/>
 					<Caption>Memory Card game</Caption>
 				</IconWrapper>
+				<Link to='/About' style={{ textDecoration: 'none', color: '#ffac41' }}>
+					<IconWrapper
+						onMouseEnter={() => descriptionHandler('faInfo')}
+						onMouseLeave={mouseLeave}>
+						<FontAwesomeIcon
+							style={{ margin: 'auto', color: 'red' }}
+							icon={faInfo}
+						/>
+						<Caption>About my practice</Caption>
+					</IconWrapper>
+				</Link>
 			</div>
 			<DetailInfo type={hoverIcon} />
 		</div>

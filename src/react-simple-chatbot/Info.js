@@ -10,7 +10,7 @@ const InfoWrapper = styled.div`
 	background: black;
 	color: white;
 	text-align: center;
-	width: 50vw;
+	width: 70vw;
 	font-size: 2rem;
 `;
 
@@ -30,7 +30,7 @@ const ContinueButton = styled.div`
 	display: inline-block;
 	padding: 8px;
 	border-radius: 8px;
-	transition: 1s;
+	transition: 0.5s;
 	&:hover {
 		background: #900c3f;
 		transform: scale(1.2);
@@ -40,7 +40,7 @@ const ContinueButton = styled.div`
 
 function Info(props) {
 	return (
-		<div>
+		<div style={{ margin: 'auto' }}>
 			<InfoWrapper>
 				I am familiar with
 				<IconWrapper>
@@ -56,7 +56,10 @@ function Info(props) {
 					}}>
 					As you can see, React is the first framework that I started with and I
 					fell in love with it ever since. To me, react is cohesive and it
-					offers interactivity with ease.
+					offers interactivity with ease. I am also able to use some packages
+					within the React ecosystem such as{' '}
+					<span style={{ color: '#ff1e56' }}>React-Router</span> and
+					<span style={{ color: '#ff1e56' }}> Styled-Component</span>
 				</p>
 				<ContinueButton onClick={props.transition}>What's more</ContinueButton>
 			</InfoWrapper>

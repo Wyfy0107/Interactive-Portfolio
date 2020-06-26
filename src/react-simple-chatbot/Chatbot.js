@@ -14,7 +14,7 @@ function CustomChatbot(props) {
 	const style = {
 		background: 'black',
 		margin: '70px auto',
-		width: props.infoDisplay ? '50vw' : '70vw',
+		width: props.infoDisplay ? '0' : '70vw',
 		transition: '1s',
 	};
 	const steps = [
@@ -40,7 +40,8 @@ function CustomChatbot(props) {
 		},
 		{
 			id: 'ask user purpose',
-			message: 'You must be here to look at my portfolio, is that correct ? 😀',
+			message:
+				'You must be here to check out my portfolio, is that correct ? 😀',
 			trigger: 'user answer',
 		},
 		{
@@ -80,11 +81,13 @@ function CustomChatbot(props) {
 		{
 			id: 'transition',
 			message: 'take a look on the right side',
+
 			trigger: 'portfolio',
 		},
 		{
 			id: 'portfolio',
 			message: props.infoDisplayHandler,
+			end: true,
 		},
 	];
 	return (

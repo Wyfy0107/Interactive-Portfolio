@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Description = styled.p`
-	margin-top: 2rem;
 	font-size: 1.2rem;
 	width: 30vw;
-	margin: 70px auto;
+	margin: 2rem auto;
 `;
 
 function DetailInfo({ type }) {
@@ -36,8 +35,8 @@ function DetailInfo({ type }) {
 				<Description>
 					This time I tried to make an App that display the Air Quality in
 					Helsinki, the city I am living in. After this project, I learned how
-					to make API calls to GET the data I want, manipulate them and render
-					them to the screen.
+					to make API calls using Axios package to GET the data I want,
+					manipulate them and render them to the screen.
 				</Description>
 			);
 			break;
