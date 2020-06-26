@@ -21,7 +21,7 @@ function CustomChatbot(props) {
 		{
 			id: 'Greet',
 			message: 'Hello, My name is Duy',
-			trigger: 'portfolio',
+			trigger: 'Done',
 		},
 		{
 			id: 'Done',

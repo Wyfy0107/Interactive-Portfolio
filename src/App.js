@@ -41,6 +41,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar />
+
 				<Switch>
 					<Route exact path='/'>
 						<CustomChatbot

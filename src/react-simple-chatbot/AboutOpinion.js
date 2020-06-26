@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import typing from '../images/typing.png';
 import pic2 from '../images/pic2.png';
+import { Link } from 'react-router-dom';
 
 const OpinionWrapper = styled.div`
 	display: flex;
@@ -10,10 +11,26 @@ const OpinionWrapper = styled.div`
 	align-items: center;
 `;
 
+const ContactButton = styled.div`
+	border-style: none;
+	background: black;
+	color: #ff1e56;
+	border: 1px solid white;
+	display: inline-block;
+	padding: 8px;
+	border-radius: 8px;
+	transition: 0.5s;
+	&:hover {
+		background: #900c3f;
+		transform: scale(1.2);
+		cursor: pointer;
+	}
+`;
+
 const Image = styled.img`
 	width: 10vw;
 	height: 10vw;
-	margin: 1rem;
+	margin: 1rem 1rem 5px 1rem;
 `;
 
 const Content = styled.div`
@@ -31,7 +48,16 @@ function AboutOpinion() {
 		<div>
 			<OpinionWrapper>
 				<Content>
-					<Image src={pic2} alt='web browser' />
+					<div>
+						<Image src={pic2} alt='web browser' />
+						<p
+							style={{
+								fontSize: '0.7rem',
+								textAlign: 'center',
+							}}>
+							Icon made by Nhor Phai from www.flaticon.com
+						</p>
+					</div>
 					<Text>
 						I love programming interactive web apps with React.
 						<br /> In my opinion, SPAs offer a more friendly and fun interaction
@@ -53,8 +79,20 @@ function AboutOpinion() {
 						all, it simply is because programming to me is stimulative, <br />
 						fun and never cease to amaze me.
 					</Text>
-					<Image src={typing} alt='typing' />
+					<div>
+						<Image src={typing} alt='typing' />
+						<p
+							style={{
+								fontSize: '0.7rem',
+								textAlign: 'center',
+							}}>
+							Icon made by Monkik from www.flaticon.com
+						</p>
+					</div>
 				</Content>
+				<Link to='/Contact'>
+					<ContactButton>Contact me</ContactButton>
+				</Link>
 			</OpinionWrapper>
 		</div>
 	);

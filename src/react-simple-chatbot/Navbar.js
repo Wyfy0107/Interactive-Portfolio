@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import rocket from '../images/rocket.png';
 
 const NavbarWrapper = styled.nav`
 	background: black;
@@ -12,11 +13,17 @@ const NavbarWrapper = styled.nav`
 	color: #ffac41;
 `;
 
+const Image = styled.img`
+	width: 7%;
+`;
+
 function Navbar() {
 	return (
 		<div>
 			<NavbarWrapper>
-				<h1 style={{ flex: '5 1', marginLeft: '10%' }}>Icon</h1>
+				<div style={{ flex: '5 1', margin: '1.2rem 10% ' }}>
+					<Image src={rocket} alt='rocket icon' />
+				</div>
 				<Link
 					to='/'
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
