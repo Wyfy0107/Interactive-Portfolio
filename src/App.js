@@ -6,6 +6,7 @@ import About from './react-simple-chatbot/About';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import AboutOpinion from './react-simple-chatbot/AboutOpinion';
+import Contact from './react-simple-chatbot/Contact';
 
 const AboutWrapper = styled.div`
 	margin: auto;
@@ -56,8 +57,13 @@ class App extends React.Component {
 							/>
 						</AboutWrapper>
 					</Route>
+
 					<Route path='/About'>
 						<AboutOpinion />
+					</Route>
+
+					<Route path='/Contact'>
+						<Contact />
 					</Route>
 				</Switch>
 			</div>

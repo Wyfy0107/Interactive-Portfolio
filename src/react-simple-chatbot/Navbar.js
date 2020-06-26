@@ -27,7 +27,9 @@ function Navbar() {
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
 					<h2>About</h2>
 				</Link>
-				<Link style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
+				<Link
+					to='/Contact'
+					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
 					<h2>Contact</h2>
 				</Link>
 			</NavbarWrapper>

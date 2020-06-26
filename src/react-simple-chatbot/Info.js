@@ -19,7 +19,7 @@ const IconWrapper = styled.div`
 	flex-flow: row;
 	justify-content: space-around;
 	margin-top: 60px;
-	font-size: 70px;
+	font-size: 5rem;
 `;
 
 const ContinueButton = styled.div`
