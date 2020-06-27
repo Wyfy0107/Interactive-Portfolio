@@ -42,7 +42,7 @@ const EmailButton = styled.button`
 
 function Contact() {
 	return (
-		<div style={{ margin: 'auto', textAlign: 'center' }}>
+		<div className='page' style={{ margin: 'auto', textAlign: 'center' }}>
 			<ContactWrapper>
 				<div>
 					<FontAwesomeIcon icon={faMobileAlt} />

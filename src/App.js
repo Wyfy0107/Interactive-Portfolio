@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import AboutOpinion from './react-simple-chatbot/AboutOpinion';
 import Contact from './react-simple-chatbot/Contact';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const AboutWrapper = styled.div`
 	margin: auto;
@@ -41,32 +42,41 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar />
+				<Route
+					render={({ location }) => (
+						<TransitionGroup>
+							<CSSTransition timeout={450} key={location.key} classNames='fade'>
+								<Switch location={location}>
+									<Route exact path='/'>
+										<div className='page'>
+											<CustomChatbot
+												infoDisplay={this.state.infoDisplay}
+												infoDisplayHandler={this.infoDisplayHandler}
+												transitionHandler={this.aboutPageTransitionHandler}
+												transition={this.state.aboutPageTransition}
+											/>
+											<AboutWrapper transition={this.state.aboutPageTransition}>
+												<About
+													descriptionHandler={this.descriptionHandler}
+													hoverIcon={this.state.hoveringIcon}
+													mouseLeave={this.descriptionToggler}
+												/>
+											</AboutWrapper>
+										</div>
+									</Route>
 
-				<Switch>
-					<Route exact path='/'>
-						<CustomChatbot
-							infoDisplay={this.state.infoDisplay}
-							infoDisplayHandler={this.infoDisplayHandler}
-							transitionHandler={this.aboutPageTransitionHandler}
-							transition={this.state.aboutPageTransition}
-						/>
-						<AboutWrapper transition={this.state.aboutPageTransition}>
-							<About
-								descriptionHandler={this.descriptionHandler}
-								hoverIcon={this.state.hoveringIcon}
-								mouseLeave={this.descriptionToggler}
-							/>
-						</AboutWrapper>
-					</Route>
+									<Route path='/About'>
+										<AboutOpinion />
+									</Route>
 
-					<Route path='/About'>
-						<AboutOpinion />
-					</Route>
-
-					<Route path='/Contact'>
-						<Contact />
-					</Route>
-				</Switch>
+									<Route path='/Contact'>
+										<Contact />
+									</Route>
+								</Switch>
+							</CSSTransition>
+						</TransitionGroup>
+					)}
+				/>
 			</div>
 		);
 	}

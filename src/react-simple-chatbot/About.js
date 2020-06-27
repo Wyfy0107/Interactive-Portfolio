@@ -10,7 +10,6 @@ import {
 import styled from 'styled-components';
 import DetailInfo from './DetailInfo';
 import { Link, Switch, Route } from 'react-router-dom';
-import AboutOpinion from './AboutOpinion';
 
 const gridStyle = {
 	fontSize: '5rem',

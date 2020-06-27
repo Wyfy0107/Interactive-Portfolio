@@ -45,7 +45,7 @@ const Text = styled.p`
 
 function AboutOpinion() {
 	return (
-		<div>
+		<div className='page'>
 			<OpinionWrapper>
 				<Content>
 					<div>

@@ -40,29 +40,36 @@ const ContinueButton = styled.div`
 
 function Info(props) {
 	return (
-		<div style={{ margin: 'auto' }}>
-			<InfoWrapper>
-				I am familiar with
-				<IconWrapper>
-					<FontAwesomeIcon style={{ color: '#DE4B25' }} icon={faHtml5} />
-					<FontAwesomeIcon style={{ color: '#146FB1' }} icon={faCss3Alt} />
-					<FontAwesomeIcon style={{ color: '#E9D54D' }} icon={faJs} />
-					<FontAwesomeIcon style={{ color: '#5ED4F4' }} icon={faReact} />
-				</IconWrapper>
-				<p
-					style={{
-						marginTop: '50px',
-						padding: '15px',
-					}}>
-					As you can see, React is the first framework that I started with and I
-					fell in love with it ever since. To me, react is cohesive and it
-					offers interactivity with ease. I am also able to use some packages
-					within the React ecosystem such as{' '}
-					<span style={{ color: '#ff1e56' }}>React-Router</span> and
-					<span style={{ color: '#ff1e56' }}> Styled-Component</span>
-				</p>
-				<ContinueButton onClick={props.transition}>What's more</ContinueButton>
-			</InfoWrapper>
+		<div
+			style={{
+				margin: 'auto',
+			}}>
+			{props.transitionState || (
+				<InfoWrapper>
+					I am familiar with
+					<IconWrapper>
+						<FontAwesomeIcon style={{ color: '#DE4B25' }} icon={faHtml5} />
+						<FontAwesomeIcon style={{ color: '#146FB1' }} icon={faCss3Alt} />
+						<FontAwesomeIcon style={{ color: '#E9D54D' }} icon={faJs} />
+						<FontAwesomeIcon style={{ color: '#5ED4F4' }} icon={faReact} />
+					</IconWrapper>
+					<p
+						style={{
+							marginTop: '50px',
+							padding: '15px',
+						}}>
+						As you can see, React is the first framework that I started with and
+						I fell in love with it ever since. To me, react is cohesive and it
+						offers interactivity with ease. I am also able to use some packages
+						within the React ecosystem such as{' '}
+						<span style={{ color: '#ff1e56' }}>React-Router</span> and
+						<span style={{ color: '#ff1e56' }}> Styled-Component</span>
+					</p>
+					<ContinueButton onClick={props.transition}>
+						What's more
+					</ContinueButton>
+				</InfoWrapper>
+			)}
 		</div>
 	);
 }
