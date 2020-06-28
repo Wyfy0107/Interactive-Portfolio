@@ -14,7 +14,7 @@ const NavbarWrapper = styled.nav`
 `;
 
 const Image = styled.img`
-	width: 7%;
+	width: 50px;
 `;
 
 function Navbar() {
@@ -25,7 +25,7 @@ function Navbar() {
 					<Image src={rocket} alt='rocket icon' />
 				</div>
 				<Link
-					to='/'
+					to='/Interactive-Portfolio'
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
 					<h2>Home</h2>
 				</Link>
