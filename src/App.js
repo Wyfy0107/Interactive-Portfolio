@@ -47,7 +47,7 @@ class App extends React.Component {
 						<TransitionGroup>
 							<CSSTransition timeout={450} key={location.key} classNames='fade'>
 								<Switch location={location}>
-									<Route exact path='/'>
+									<Route exact path='/Interactive-Portfolio'>
 										<div className='page'>
 											<CustomChatbot
 												infoDisplay={this.state.infoDisplay}
