@@ -24,13 +24,21 @@ const Title = styled.h2`
 	}
 `;
 
+const LogoWrapper = styled.div`
+	flex: 5 1;
+	margin: 1.2rem 10%;
+	@media (max-width: 800px) {
+		flex: 1.5 1;
+	}
+`;
+
 function Navbar() {
 	return (
 		<div>
 			<NavbarWrapper>
-				<div style={{ flex: '5 1', margin: '1.2rem 10% ' }}>
+				<LogoWrapper>
 					<Image src={rocket} alt='rocket icon' />
-				</div>
+				</LogoWrapper>
 				<Link
 					to='/Interactive-Portfolio'
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
