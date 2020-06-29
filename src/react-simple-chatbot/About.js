@@ -35,47 +35,70 @@ const IconWrapper = styled.div`
 	}
 `;
 
+const ExternalLink = styled.a`
+	text-decoration: none;
+	color: white;
+`;
+
 function About({ descriptionHandler, mouseLeave, hoverIcon }) {
 	return (
 		<div>
 			<Header>Here are some of the projects I have done</Header>
 			<div style={gridStyle}>
-				<IconWrapper
-					onMouseEnter={() => descriptionHandler('faUserCircle')}
-					onMouseLeave={mouseLeave}>
-					<FontAwesomeIcon
-						style={{ margin: 'auto', color: '#1f4068' }}
-						icon={faUserCircle}
-					/>
-					<Caption>My first CV website</Caption>
-				</IconWrapper>
-				<IconWrapper
-					onMouseEnter={() => descriptionHandler('faCalculator')}
-					onMouseLeave={mouseLeave}>
-					<FontAwesomeIcon
-						style={{ margin: 'auto', color: '#222831' }}
-						icon={faCalculator}
-					/>
-					<Caption>Simple Calculator</Caption>
-				</IconWrapper>
-				<IconWrapper
-					onMouseEnter={() => descriptionHandler('faCloudSunRain')}
-					onMouseLeave={mouseLeave}>
-					<FontAwesomeIcon
-						style={{ margin: 'auto', color: '#ff5722' }}
-						icon={faCloudSunRain}
-					/>
-					<Caption>Air Quality App</Caption>
-				</IconWrapper>
-				<IconWrapper
-					onMouseEnter={() => descriptionHandler('faPuzzlePiece')}
-					onMouseLeave={mouseLeave}>
-					<FontAwesomeIcon
-						style={{ margin: 'auto', color: '#f38181' }}
-						icon={faPuzzlePiece}
-					/>
-					<Caption>Memory Card game</Caption>
-				</IconWrapper>
+				<ExternalLink href='https://wyfy0107.github.io/CV/' target='_blank'>
+					<IconWrapper
+						onMouseEnter={() => descriptionHandler('faUserCircle')}
+						onMouseLeave={mouseLeave}>
+						<FontAwesomeIcon
+							style={{ margin: 'auto', color: '#1f4068' }}
+							icon={faUserCircle}
+						/>
+						<Caption>My first CV website</Caption>
+					</IconWrapper>
+				</ExternalLink>
+
+				<ExternalLink
+					href='https://wyfy0107.github.io/Calculator/'
+					target='_blank'>
+					<IconWrapper
+						onMouseEnter={() => descriptionHandler('faCalculator')}
+						onMouseLeave={mouseLeave}>
+						<FontAwesomeIcon
+							style={{ margin: 'auto', color: '#222831' }}
+							icon={faCalculator}
+						/>
+						<Caption>Simple Calculator</Caption>
+					</IconWrapper>
+				</ExternalLink>
+
+				<ExternalLink
+					href='https://wyfy0107.github.io/weather-app/'
+					target='_blank'>
+					<IconWrapper
+						onMouseEnter={() => descriptionHandler('faCloudSunRain')}
+						onMouseLeave={mouseLeave}>
+						<FontAwesomeIcon
+							style={{ margin: 'auto', color: '#ff5722' }}
+							icon={faCloudSunRain}
+						/>
+						<Caption>Air Quality App</Caption>
+					</IconWrapper>
+				</ExternalLink>
+
+				<ExternalLink
+					href='https://wyfy0107.github.io/memory-card-game/'
+					target='_blank'>
+					<IconWrapper
+						onMouseEnter={() => descriptionHandler('faPuzzlePiece')}
+						onMouseLeave={mouseLeave}>
+						<FontAwesomeIcon
+							style={{ margin: 'auto', color: '#f38181' }}
+							icon={faPuzzlePiece}
+						/>
+						<Caption>Memory Card game</Caption>
+					</IconWrapper>
+				</ExternalLink>
+
 				<Link to='/About' style={{ textDecoration: 'none', color: '#ffac41' }}>
 					<IconWrapper
 						onMouseEnter={() => descriptionHandler('faInfo')}

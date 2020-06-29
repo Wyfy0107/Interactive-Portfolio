@@ -17,6 +17,13 @@ const Image = styled.img`
 	width: 50px;
 `;
 
+const Title = styled.h2`
+	transition: 0.5s;
+	&:hover {
+		color: #ff1e56;
+	}
+`;
+
 function Navbar() {
 	return (
 		<div>
@@ -27,17 +34,17 @@ function Navbar() {
 				<Link
 					to='/Interactive-Portfolio'
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
-					<h2>Home</h2>
+					<Title>Home</Title>
 				</Link>
 				<Link
 					to='/About'
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
-					<h2>About</h2>
+					<Title>About</Title>
 				</Link>
 				<Link
 					to='/Contact'
 					style={{ flex: '1 2', textDecoration: 'none', color: '#ffac41' }}>
-					<h2>Contact</h2>
+					<Title>Contact</Title>
 				</Link>
 			</NavbarWrapper>
 		</div>

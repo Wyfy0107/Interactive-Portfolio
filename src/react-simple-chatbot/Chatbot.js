@@ -66,7 +66,7 @@ function CustomChatbot(props) {
 		{
 			id: 'introduction',
 			message:
-				'Then I wanted to learn something new and started with web development, and now, I fell in love with it.',
+				'In the past few months, I wanted to learn something new and started with web development, and now, I fell in love with it.',
 			trigger: 'intro',
 		},
 		{
