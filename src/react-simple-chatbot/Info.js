@@ -62,7 +62,8 @@ function Info(props) {
 						I fell in love with it ever since. To me, react is cohesive and it
 						offers interactivity with ease. I am also able to use some packages
 						within the React ecosystem such as{' '}
-						<span style={{ color: '#ff1e56' }}>React-Router</span> and
+						<span style={{ color: '#ff1e56' }}>React-Router</span>,{' '}
+						<span style={{ color: '#ff1e56' }}>Redux</span> and{' '}
 						<span style={{ color: '#ff1e56' }}> Styled-Component</span>
 					</p>
 					<ContinueButton onClick={props.transition}>
