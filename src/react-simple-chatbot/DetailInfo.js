@@ -13,9 +13,11 @@ function DetailInfo({ type }) {
 		case 'faUserCircle':
 			descriptionContent = (
 				<Description>
-					I made this CV after I learned the basics of HTML. Although it does
-					not look like much, it did sparked the curiosity and passion in coding
-					in me, which has led to what I am today.
+					I made this app after learning the basic concepts of Redux and it
+					seems very new and interesting to me. Although Redux may add lots of
+					boiler blate to the code, I think that this is necessary in a
+					wide-scale application since it enforces everyone to follow the same
+					practice.
 				</Description>
 			);
 			break;
@@ -43,8 +45,8 @@ function DetailInfo({ type }) {
 		case 'faPuzzlePiece':
 			descriptionContent = (
 				<Description>
-					Then I challenged myself with a web game. This one was tough as I had
-					to combine detailed CSS to animate the movement of the cards and keep
+					I challenged myself with a web game. This one was tough as I had to
+					combine detailed CSS to animate the movement of the cards and keep
 					them in sync with the logic.
 				</Description>
 			);

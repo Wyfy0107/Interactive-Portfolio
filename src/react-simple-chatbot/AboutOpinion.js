@@ -50,13 +50,6 @@ function AboutOpinion() {
 				<Content>
 					<div>
 						<Image src={pic2} alt='web browser' />
-						<p
-							style={{
-								fontSize: '0.7rem',
-								textAlign: 'center',
-							}}>
-							Icon made by Nhor Phai from www.flaticon.com
-						</p>
 					</div>
 					<Text>
 						I love programming interactive web apps with React.
@@ -81,13 +74,6 @@ function AboutOpinion() {
 					</Text>
 					<div>
 						<Image src={typing} alt='typing' />
-						<p
-							style={{
-								fontSize: '0.7rem',
-								textAlign: 'center',
-							}}>
-							Icon made by Monkik from www.flaticon.com
-						</p>
 					</div>
 				</Content>
 				<Link to='/Contact'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faUserCircle,
+	faSortNumericUpAlt,
 	faCalculator,
 	faCloudSunRain,
 	faPuzzlePiece,
@@ -45,15 +45,17 @@ function About({ descriptionHandler, mouseLeave, hoverIcon }) {
 		<div>
 			<Header>Here are some of the projects I have done</Header>
 			<div style={gridStyle}>
-				<ExternalLink href='https://wyfy0107.github.io/CV/' target='_blank'>
+				<ExternalLink
+					href='https://wyfy0107.github.io/Counter-with-Redux/'
+					target='_blank'>
 					<IconWrapper
 						onMouseEnter={() => descriptionHandler('faUserCircle')}
 						onMouseLeave={mouseLeave}>
 						<FontAwesomeIcon
 							style={{ margin: 'auto', color: '#1f4068' }}
-							icon={faUserCircle}
+							icon={faSortNumericUpAlt}
 						/>
-						<Caption>My first CV website</Caption>
+						<Caption>Counter</Caption>
 					</IconWrapper>
 				</ExternalLink>
 
